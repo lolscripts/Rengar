@@ -438,20 +438,20 @@ namespace RengarPro
         }
         private static void MenuInit()
         {
-            Menu = MainMenu.AddMenu("RengarPro", "_RengarPro");
-            Menu.AddGroupLabel("RengarPro Loaded Suckssfully (No Subliminal)..");
-            Menu.AddLabel("This great addon made by Rexy..");
-            Menu.AddLabel("If you found a Bug, pls feedback it on my Thread..");
-            Menu.AddLabel("I need your feedback for make this addon more cool..");
-            Menu.AddLabel("My main aim for making this addon, i wanted oneshot addon for Rengod..");
-            Menu.AddLabel("Have fun !");
+            Menu = MainMenu.AddMenu("Rengar - Lolscripts.net", "Rengar - Lolscripts.net");
+            Menu.AddGroupLabel("Rengar - Lolscripts.net CARGADO !!!");
+            Menu.AddLabel("Lolscripts.net");
+            Menu.AddLabel("Cualquier duda consulte en el post");
+            Menu.AddLabel("Lolscripts.net");
+            Menu.AddLabel("Lolscripts.net");
+            Menu.AddLabel("Diviértete !");
 
-            AllMenu = Menu.AddSubMenu("All Settingz", "_AllMenu");
+            AllMenu = Menu.AddSubMenu("Config", "Config");
             AllMenu.AddSeparator();
-            AllMenu.AddGroupLabel("Combo Mode");
+            AllMenu.AddGroupLabel("Combo Modo");
             AllMenu.AddLabel("| 1 -> One Shot || 2 -> Snare |");
-            AllMenu.Add("combo.mode", new Slider("Combo Mode", 1, 1, 2));
-            var switcher = AllMenu.Add("Switcher", new KeyBind("Combo Mode Switcher", false, KeyBind.BindTypes.HoldActive, (uint)'T'));
+            AllMenu.Add("combo.mode", new Slider("Combo Modo", 1, 1, 2));
+            var switcher = AllMenu.Add("Switcher", new KeyBind("Combo Modo Switcher", false, KeyBind.BindTypes.HoldActive, (uint)'T'));
             switcher.OnValueChange += delegate (ValueBase<bool> sender, ValueBase<bool>.ValueChangeArgs args)
             {
                 if (args.NewValue == true)
@@ -467,32 +467,32 @@ namespace RengarPro
                     }
                 }
             };
-            AllMenu.Add("autoyoumu", new CheckBox("Auto Youmu When Ulti"));
-            AllMenu.Add("draw.mode", new CheckBox("Draw Mode"));
-            AllMenu.Add("draw.selectedenemy", new CheckBox("Draw Selected Target"));
-            AllMenu.Add("magnet.enable", new CheckBox("Enable Magnet"));
-            AllMenu.Add("use.smite", new CheckBox("Use Smite on Combo"));
-            AllMenu.Add("useeoutofq", new CheckBox("Use E out of Q Range"));
+            AllMenu.Add("autoyoumu", new CheckBox("Auto Youmu con la Ulti"));
+            AllMenu.Add("draw.mode", new CheckBox("Circulos Modo"));
+            AllMenu.Add("draw.selectedenemy", new CheckBox("Circulo en target seleccionado"));
+            AllMenu.Add("magnet.enable", new CheckBox("Activar Iman"));
+            AllMenu.Add("use.smite", new CheckBox("Usar Smite en Combo"));
+            AllMenu.Add("useeoutofq", new CheckBox("Usar E fuera del rango de la Q"));
             AllMenu.AddSeparator();
-            AllMenu.AddGroupLabel("LaneClear Mode");
-            AllMenu.Add("laneclear.q", new CheckBox("Use Q"));
-            AllMenu.Add("laneclear.w", new CheckBox("Use W"));
-            AllMenu.Add("laneclear.e", new CheckBox("Use E"));
-            AllMenu.Add("laneclear.save", new CheckBox("Save Stacks", false));
+            AllMenu.AddGroupLabel("LimpiarLinea Modo");
+            AllMenu.Add("laneclear.q", new CheckBox("Usar Q"));
+            AllMenu.Add("laneclear.w", new CheckBox("Usar W"));
+            AllMenu.Add("laneclear.e", new CheckBox("Usar E"));
+            AllMenu.Add("laneclear.save", new CheckBox("Guardar Stacks", false));
             AllMenu.AddSeparator();
-            AllMenu.AddGroupLabel("JungleClear Mode");
-            AllMenu.Add("jungleclear.q", new CheckBox("Use Q"));
-            AllMenu.Add("jungleclear.w", new CheckBox("Use W"));
-            AllMenu.Add("jungleclear.e", new CheckBox("Use E"));
-            AllMenu.Add("jungleclear.save", new CheckBox("Save Stacks", false));
+            AllMenu.AddGroupLabel("LimpiarJungla Modo");
+            AllMenu.Add("jungleclear.q", new CheckBox("Usar Q"));
+            AllMenu.Add("jungleclear.w", new CheckBox("Usar W"));
+            AllMenu.Add("jungleclear.e", new CheckBox("Usar E"));
+            AllMenu.Add("jungleclear.save", new CheckBox("Guardar Stacks", false));
             AllMenu.AddSeparator();
             AllMenu.AddGroupLabel("Auto Hp %x when 5 prio");
-            AllMenu.Add("autohp.active", new CheckBox("AutoHP Active"));
-            AllMenu.Add("autohp.value", new Slider("AutoHP Value", 30, 1));
+            AllMenu.Add("autohp.active", new CheckBox("AutoHP Activo"));
+            AllMenu.Add("autohp.value", new Slider("AutoHP Valor", 30, 1));
             AllMenu.AddSeparator();
-            AllMenu.Add("skin.active", new CheckBox("Skin Hack Active"));
+            AllMenu.Add("skin.active", new CheckBox("Skin Hack Activo"));
             AllMenu.AddLabel("| 1 -> HeadHunter || 2 -> NighHunter || 3-> SSW");
-            AllMenu.Add("skin.value", new Slider("Selected Skin", 3, 1, 3));
+            AllMenu.Add("skin.value", new Slider("Seleccionado Skin", 3, 1, 3));
         }
 
         private static void Items()
